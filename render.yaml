@@ -2,11 +2,11 @@ services:
 - type: web
   name: wordpress
   env: docker
-  plan: standard
+  plan: proultra
   disk:
     name: wordpress
     mountPath: /var/www/html
-    sizeGB: 20
+    sizeGB: 500
   envVars:
   - key: WORDPRESS_DB_HOST
     fromService:
@@ -32,11 +32,11 @@ services:
   name: mysql-wordpress
   repo: https://github.com/render-examples/mysql.git
   env: docker
-  plan: standard
+  plan: proultra
   disk:
     name: mysql-wordpress
     mountPath: /var/lib/mysql
-    sizeGB: 20
+    sizeGB: 500
   envVars:
   - key: MYSQL_DATABASE
     value: mysql
